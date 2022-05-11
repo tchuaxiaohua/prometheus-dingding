@@ -1,0 +1,3 @@
+etc/app-prod.toml
+template/alert01.tmpl
+templates/*

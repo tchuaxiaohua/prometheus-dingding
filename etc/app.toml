@@ -1,0 +1,14 @@
+[app]
+host = "0.0.0.0"
+port = "18080"
+
+# 钉钉token
+# 多钉钉告警信息发送，是根据Prometheus配置的tag，alertmanager根据不同tag发送至不同的webhook地址来实现
+# 具体配置参看。。。
+[dingding]
+    # 请求示例地址: http://127.0.0.1:8080/dingding/tchua01
+    [dingding.tchua01]
+        token = "******"
+    # 请求示例地址: http://127.0.0.1:8080/dingding/tchua02
+    [dingding.tchua02]
+        token = "******"
