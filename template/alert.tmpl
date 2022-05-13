@@ -1,26 +1,29 @@
-{{/*{{ $var := .generatorURL}}*/}}
-
 {{if eq .Status "resolved"}}
 ## Prometheus告警恢复 \n\n
 **告警级别**: {{ .Labels.severity }} \n\n
 **告警类型**: {{ .Labels.alertname }} \n\n
-{{if .Labels.instance }}
-**故障主机**: {{ .Labels.instance }} \n\n
-{{else}}
+{{if .Labels.pod }}
+**故障主机**: {{ .Labels.pod }} \n\n
+{{else if .Labels.container }}
 **故障主机**: {{ .Labels.container }} \n\n
+{{else if .Labels.instance }}
+**故障主机**: {{ .Labels.instance }} \n\n
 {{end}}
 **告警详情**: {{ .Annotations.Description }} \n\n
 **告警状态**: {{ .Status }} \n\n
 **触发时间**: {{ .Startsat }} \n\n
 **触发结束时间**: {{ .Endsat }}
+
 {{else}}
 ## Prometheus告警信息 \n\n
 **告警级别**：{{ .Labels.severity }} \n\n
 **告警类型**: {{ .Labels.alertname }} \n\n
-{{if .Labels.instance }}
-**故障主机**: {{ .Labels.instance }} \n\n
-{{else}}
+{{if .Labels.pod }}
+**故障主机**: {{ .Labels.pod }} \n\n
+{{else if .Labels.container }}
 **故障主机**: {{ .Labels.container }} \n\n
+{{else if .Labels.instance }}
+**故障主机**: {{ .Labels.instance }} \n\n
 {{end}}
 **告警详情**: {{ .Annotations.Description }} \n\n
 **告警状态**: {{ .Status }} \n\n
