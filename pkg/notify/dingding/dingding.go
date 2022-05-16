@@ -2,13 +2,15 @@ package dingding
 
 import (
 	"bytes"
-	"dingding-alert/config"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/tchuaxiaohua/prometheus-dingding/config"
+
+	"github.com/gin-gonic/gin"
 )
 
 func NewDingInfo(c *gin.Context) *DingInfo {

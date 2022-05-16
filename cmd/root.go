@@ -1,10 +1,12 @@
 package cmd
 
 import (
-	"dingding-alert/config"
-	"dingding-alert/pkg/notify/dingding"
-	"dingding-alert/pkg/prometheus"
 	"fmt"
+
+	"github.com/tchuaxiaohua/prometheus-dingding/config"
+	"github.com/tchuaxiaohua/prometheus-dingding/pkg/notify/dingding"
+	"github.com/tchuaxiaohua/prometheus-dingding/pkg/prometheus"
+
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/cobra"
 )

@@ -1,9 +1,10 @@
 package main
 
 import (
-	"dingding-alert/cmd"
 	"fmt"
 	"os"
+
+	"github.com/tchuaxiaohua/prometheus-dingding/cmd"
 )
 
 func main() {

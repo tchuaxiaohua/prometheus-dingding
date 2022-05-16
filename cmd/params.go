@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"dingding-alert/config"
+	"github.com/tchuaxiaohua/prometheus-dingding/config"
 )
 
 // 定义所有 启动参数
