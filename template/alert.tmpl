@@ -11,9 +11,9 @@
 {{else if .Labels.instance }}
 **故障主机**: {{ .Labels.instance }} \n\n
 {{end}}
-{{if .Labels.Description }}
+{{if .Annotations.Description }}
 **告警详情**: {{ .Annotations.Description }} \n\n
-{{else if .Labels.Summary }}
+{{else if .Annotations.Summary }}
 **告警详情**: {{ .Annotations.Summary }} \n\n
 {{ end }}
 **告警状态**: {{ .Status }} \n\n
@@ -33,9 +33,9 @@
 {{else if .Labels.instance }}
 **故障主机**: {{ .Labels.instance }} \n\n
 {{end}}
-{{if .Labels.Description }}
+{{if .Annotations.Description }}
 **告警详情**: {{ .Annotations.Description }} \n\n
-{{else if .Labels.Summary }}
+{{else if .Annotations.Summary }}
 **告警详情**: {{ .Annotations.Summary }} \n\n
 {{ end }}
 **告警状态**: {{ .Status }} \n\n
