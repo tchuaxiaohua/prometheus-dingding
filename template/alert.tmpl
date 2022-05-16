@@ -13,8 +13,8 @@
 {{end}}
 {{if .Labels.Description }}
 **告警详情**: {{ .Annotations.Description }} \n\n
-{{if .Labels.summary }}
-**告警详情**: {{ .Annotations.summary }} \n\n
+{{if .Labels.Summary }}
+**告警详情**: {{ .Annotations.Summary }} \n\n
 {{ end }}
 **告警状态**: {{ .Status }} \n\n
 **触发时间**: {{ .Startsat }} \n\n
@@ -35,8 +35,8 @@
 {{end}}
 {{if .Labels.Description }}
 **告警详情**: {{ .Annotations.Description }} \n\n
-{{if .Labels.summary }}
-**告警详情**: {{ .Annotations.summary }} \n\n
+{{if .Labels.Summary }}
+**告警详情**: {{ .Annotations.Summary }} \n\n
 {{ end }}
 **告警状态**: {{ .Status }} \n\n
 **触发时间**: {{ .Startsat }}
