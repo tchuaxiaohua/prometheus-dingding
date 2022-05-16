@@ -6,10 +6,16 @@
 **故障主机**: {{ .Labels.pod }} \n\n
 {{else if .Labels.container }}
 **故障主机**: {{ .Labels.container }} \n\n
+{{else if .Labels.hostname }}
+**故障主机**: {{ .Labels.hostname }} \n\n
 {{else if .Labels.instance }}
 **故障主机**: {{ .Labels.instance }} \n\n
 {{end}}
+{{if .Labels.Description }}
 **告警详情**: {{ .Annotations.Description }} \n\n
+{{if .Labels.summary }}
+**告警详情**: {{ .Annotations.summary }} \n\n
+{{ end }}
 **告警状态**: {{ .Status }} \n\n
 **触发时间**: {{ .Startsat }} \n\n
 **触发结束时间**: {{ .Endsat }}
@@ -22,10 +28,16 @@
 **故障主机**: {{ .Labels.pod }} \n\n
 {{else if .Labels.container }}
 **故障主机**: {{ .Labels.container }} \n\n
+{{else if .Labels.hostname }}
+**故障主机**: {{ .Labels.hostname }} \n\n
 {{else if .Labels.instance }}
 **故障主机**: {{ .Labels.instance }} \n\n
 {{end}}
+{{if .Labels.Description }}
 **告警详情**: {{ .Annotations.Description }} \n\n
+{{if .Labels.summary }}
+**告警详情**: {{ .Annotations.summary }} \n\n
+{{ end }}
 **告警状态**: {{ .Status }} \n\n
 **触发时间**: {{ .Startsat }}
 {{ end }}

@@ -41,7 +41,7 @@ var RootCmd = &cobra.Command{
 			fmt.Println("配置文件初始话失败", err)
 			return err
 		}
-		// 参数判断
+		// 2 参数判断
 		ParamsInit()
 		// 3 gin 启动
 		g := gin.Default()
