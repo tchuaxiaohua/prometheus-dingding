@@ -120,7 +120,7 @@ docker run -it -d -p 18080:18080 --name dinghook huahua5404/prometheus-dingding:
 
 ~~~
 
-1.3.3 k8s
+###### 1.3.3 k8s
 
 ~~~shell
 # 创建configmap 指定配置文件
@@ -177,6 +177,18 @@ spec:
   - name: hook
     port: 18080
     targetPort: http
-
+~~~
+##### 1.4 关于模板
+##### 1.4.1 模板介绍
+~~~shell
+1) 模板文件: template/alert.tmpl
+2) 模板取值优先级说明(根据标签以此查找):
+    故障主机: pod > container > hostname > instance
+    告警详情: Description > Summary
+~~~
+##### 1.4.2 模板自定义
+~~~shell
+告警模板内容都是基于标签进行赋值，如果想定义更丰富的模板则需要自己调整prometheus监控指标的标签值。
+.Labels 获取的是指标的标签,如果自定义，直接`.Labels.tag`即可，按照MD文档格式，即可完成自定义告警模板。
 ~~~
 
